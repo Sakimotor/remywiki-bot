@@ -6,3 +6,4 @@ Requirements :
 * pycurl
 * wget
 * discord.py
+* certifi
