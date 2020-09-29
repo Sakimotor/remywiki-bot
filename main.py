@@ -104,6 +104,7 @@ async def on_message(message):
 	    		embed.add_field(name="Link", value="[" + url_afficher +"]" + "(" + url_afficher + ")", inline=False)
 	    		await message.channel.send(embed=embed)
 	    	else:
+	    		#Si nous sommes sur la page de recherche
 	    		i = 0
 	    		description = ""
 	    		if len(links) > 9:
@@ -115,7 +116,7 @@ async def on_message(message):
 	    			i = i + 1;
 	    		if len(links) > 9:
 	    			description = description + "..."
-
+	    		#Embed pour la page de recherche
 	    		embed = discord.Embed(title="Search Results", description=description.replace("&#8594;", "→"),colour=discord.Colour.blue())
 	    		image = "https://remywiki.com/wiki.png"
 	    		embed.set_thumbnail(url=miniature)
